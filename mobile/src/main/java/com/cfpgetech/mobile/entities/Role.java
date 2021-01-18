@@ -27,4 +27,9 @@ public class Role {
         this.description = description;
         this.users = users;
     }
+
+    public Role(String libelle, String description) {
+        this.libelle = libelle;
+        this.description = description;
+    }
 }

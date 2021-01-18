@@ -22,7 +22,7 @@ public class Candidat {
     @Column(unique = true, nullable = false)
     private String telephone;
     @OneToOne(cascade = CascadeType.PERSIST)
-    private User user ;
+    private User user;
 
     public Candidat(String nom, String prenom, String adresse, String telephone) {
         this.nom = nom;
