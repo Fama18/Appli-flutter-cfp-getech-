@@ -1,7 +1,11 @@
 package com.cfpgetech.mobile;
 
+import com.cfpgetech.mobile.entities.Departement;
 import com.cfpgetech.mobile.entities.Role;
 import com.cfpgetech.mobile.entities.User;
+import com.cfpgetech.mobile.repos.DepartementRepository;
+import com.cfpgetech.mobile.repos.FormationRepository;
+import com.cfpgetech.mobile.repos.ProgrammeRepository;
 import com.cfpgetech.mobile.security.services.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -15,6 +19,12 @@ public class MobileApplication implements CommandLineRunner{
 
 	@Autowired
 	private AccountService accountService;
+	@Autowired
+	private DepartementRepository departementRepository;
+	@Autowired
+	private FormationRepository formationRepository;
+	@Autowired
+	private ProgrammeRepository programmeRepository;
 
 	@Bean
 	public BCryptPasswordEncoder getBCPE() {
@@ -43,5 +53,10 @@ public class MobileApplication implements CommandLineRunner{
 //		accountService.addRoleToUser("Moussa18","CANDIDAT");
 //		accountService.saveUser(new User("Adn158", "Grinch16", "adn@gmail.com"));
 //		accountService.addRoleToUser("Adn158","CANDIDAT");
+
+//		departementRepository.save(new Departement("Metier du numerique",null));
+//		departementRepository.save(new Departement("Metier de l'industrie",null));
+//		departementRepository.save(new Departement("Metier de la gestion",null));
+//		departementRepository.save(new Departement("Metier du tertiaire",null));
 	}
 }

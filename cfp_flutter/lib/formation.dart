@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 
-class Formation extends StatelessWidget {
+class Formation extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    return FormationState();
+  }
+}
+
+class FormationState extends State<Formation> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -8,4 +16,10 @@ class Formation extends StatelessWidget {
       body:   Center(child: Text('FORMATIONS', style: TextStyle(fontSize: 22),),),
     );
   }
+
+  @override
+  void initState() {
+    super.initState();
+  }
+
 }
