@@ -54,7 +54,7 @@ class DepartementState extends State<Departement> {
     }
 
     void afficheDepartements() {
-      http.get("http://10.42.0.57:8083/departements").then((response) {
+      http.get("http://192.168.1.50:8083/departements").then((response) {
         setState(() {
           this.listeDepartements = json.decode(response.body);
         });
